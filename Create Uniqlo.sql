@@ -1,5 +1,3 @@
-
-
 -- create database Uniqlo --
 CREATE DATABASE Uniqlo;
 
@@ -13,7 +11,6 @@ selling_price decimal(10,2),
 )
 
 
-
 -- create table category --
 CREATE TABLE category (
 category_id nvarchar(255) NOT NULL PRIMARY KEY,
@@ -21,7 +18,6 @@ category_name nvarchar(255),
 season nvarchar(255),
 gender nvarchar(255),
 )
-
 
 
 -- create table customer --
@@ -36,8 +32,6 @@ join_date date,
 )
 
 
-
-
 -- create table manager --
 CREATE TABLE manager(
 manager_id nvarchar(255) NOT NULL PRIMARY KEY,
@@ -45,10 +39,6 @@ manager_name nvarchar(255),
 manager_address nvarchar(255),
 manager_email nvarchar(255),
 )
-
-
-
-
 
 
 -- create table supplier --
@@ -60,10 +50,6 @@ supplier_phone nvarchar(255),
 )
 
 
-
-
-
-
 -- create table store --
 CREATE TABLE store(
 store_id nvarchar(255) NOT NULL PRIMARY KEY,
@@ -72,8 +58,6 @@ store_location nvarchar(255),
 store_phone nvarchar(255),
 manager_id nvarchar(255) FOREIGN KEY REFERENCES manager(manager_id),
 )
-
-
 
 
 -- create table product --
@@ -89,8 +73,6 @@ supplier_id nvarchar(255) FOREIGN KEY REFERENCES supplier(supplier_id),
 )
 
 
-
-
 -- create table inventory --
 CREATE TABLE inventory(
 inventory_id nvarchar(255) NOT NULL PRIMARY KEY,
@@ -98,10 +80,6 @@ store_id nvarchar(255) FOREIGN KEY REFERENCES store(store_id),
 product_id int NOT NULL FOREIGN KEY REFERENCES product(product_id), 
 inventory_quantity int NOT NULL,
 )
-
-
-
-
 
 
 -- create table sales --
@@ -115,7 +93,6 @@ sale_rank int NOT NULL,
 )
 
 
-
 -- create table bill --
 CREATE TABLE bill(
 bill_id nvarchar(255) NOT NULL PRIMARY KEY,
@@ -127,5 +104,3 @@ customer_id nvarchar(255) FOREIGN KEY REFERENCES customer(customer_id),
 pay_method nvarchar(255),
 store_id nvarchar(255) FOREIGN KEY REFERENCES store(store_id),
 )
-
-
