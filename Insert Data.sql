@@ -1,5 +1,4 @@
 -- insert dataset 
-
 -- insert table product
 USE Uniqlo
 BULK INSERT product
@@ -12,7 +11,6 @@ WITH (
 	);
 
 
-
 -- insert table price
 USE Uniqlo
 BULK INSERT price
@@ -23,7 +21,6 @@ WITH (
 	FIELDTERMINATOR = ';',
 	ROWTERMINATOR = '\n'	
 	);
-
 
 
 -- insert table category
@@ -50,7 +47,6 @@ WITH (
 	);
 
 
-
 -- insert table supplier 
 USE Uniqlo
 BULK INSERT supplier
@@ -61,7 +57,6 @@ WITH (
 	FIELDTERMINATOR = ';',
 	ROWTERMINATOR = '\n'	
 	);
-
 
 
 -- insert table inventory
@@ -76,7 +71,6 @@ WITH (
 	);
 
 
-
 -- insert table store 
 USE Uniqlo
 BULK INSERT store
@@ -87,7 +81,6 @@ WITH (
 	FIELDTERMINATOR = ';',
 	ROWTERMINATOR = '\n'	
 	);
-
 
 
 -- insert table customer
@@ -102,7 +95,6 @@ WITH (
 	);
 
 
-
 -- insert table sales 
 USE Uniqlo
 BULK INSERT sales
@@ -115,7 +107,6 @@ WITH (
 	);
 
 
-
 -- insert table bill
 USE Uniqlo
 BULK INSERT bill
@@ -125,4 +116,5 @@ WITH (
 	FIRSTROW = 2,
 	FIELDTERMINATOR = ';',
 	ROWTERMINATOR = '\n'	
+
 	);
