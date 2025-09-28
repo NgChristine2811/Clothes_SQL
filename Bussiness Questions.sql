@@ -1,4 +1,3 @@
-﻿
 -- 1 List the customers who joined the loyalty program in 2022 and have loyalty points greater than 100. --
 USE Uniqlo;
 SELECT customer_name, join_date, loyalty_point
@@ -45,7 +44,6 @@ FROM bill b
 CROSS APPLY STRING_SPLIT(b.product_id, ',') AS s
 JOIN product p ON p.product_id = s.value
 WHERE b.customer_id = 'CUS0052';
-
 
 
 -- 6 Which are the 5 customers with the highest loyalty points, along with the dates they joined as members? --
@@ -191,3 +189,4 @@ SET s.sale_rank = r.rank
 FROM Sales s
 INNER JOIN RankCTE r ON s.sale_id = r.sale_id;
 END;
+
